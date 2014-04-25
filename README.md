@@ -3,7 +3,7 @@
 ##Installation
 
 ``` bash
-git clone git://github.com/michaeljsmalley/dotfiles ~/dotfiles
+git clone git://github.com/robertomiranda/dotfiles ~/dotfiles
 cd ~/dotfiles
 ./makesymlinks.sh
 ```
