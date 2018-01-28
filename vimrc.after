@@ -154,3 +154,4 @@ let g:gist_detect_filetype = 1
 " vim-css-color plugin
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 au BufNewFile,BufRead *.ruby        set filetype=ruby
+au BufNewFile,BufRead *.es6         set filetype=javascript
