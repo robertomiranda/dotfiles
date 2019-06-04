@@ -64,6 +64,9 @@ map! <F1> <Esc>
 " Map NERDTreeToggle to <leader> p
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
 
+" Open Kaizen Sketchpad
+noremap <silent> <leader>k          :10split ~/Documents/web-chapter/handbook/practices/kaizen-sketchpad.md <CR>
+
 " Move easily over splits
 map <C-j> <C-W>w
 map <C-k> <C-W>W
