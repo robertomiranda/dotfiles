@@ -11,3 +11,6 @@ alias gd="git diff"
 alias gpl="git pull"
 alias gp="git push"
 alias gad="git ls-files --deleted -z | xargs -0 git rm"
+
+# delete all branches except main/master
+alias gbd="git branch -l | grep -Ev \"main|master\" | xargs git branch -D"
