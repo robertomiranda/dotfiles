@@ -1,9 +1,9 @@
 " Colorscheme
+set colorcolumn=120
 set background=dark
 color solarized
 
 " Customizations
-set relativenumber
 
 set guioptions-=m       " Can't remember :)
 set guioptions-=T       " No toolbars
@@ -15,7 +15,6 @@ set hidden              " Don't prompt to save when switching buffers
 
 " My Custom Mappings
 map <c-b> :CtrlPBuffer<CR>
-call pathogen#incubate()
 
 set rtp+=/usr/share/vim/addons
 set number
@@ -64,8 +63,11 @@ map! <F1> <Esc>
 " Map NERDTreeToggle to <leader> p
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
 
-" Open Kaizen Sketchpad
-noremap <silent> <leader>k          :10split ~/Documents/web-chapter/handbook/practices/kaizen-sketchpad.md <CR>
+" Nerd tree finder shortcut
+nmap <silent> <Leader>o :NERDTreeFind<CR>
+
+" Open command-line fuzzy finder.
+nmap <silent> <Leader>l :FZF<CR>
 
 " Move easily over splits
 map <C-j> <C-W>w
@@ -137,8 +139,8 @@ command Wq wq
 if has("folding")
   set foldenable
   set foldmethod=syntax
-  set foldlevel=1
-  set foldnestmax=4
+  set foldlevel=2
+  set foldnestmax=6
   set foldtext=strpart(getline(v:foldstart),0,50).'\ ...\ '.substitute(getline(v:foldend),'^[\ #]*','','g').'\ '
 endif
 
@@ -158,3 +160,4 @@ let g:gist_detect_filetype = 1
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 au BufNewFile,BufRead *.ruby        set filetype=ruby
 au BufNewFile,BufRead *.es6         set filetype=javascript
+autocmd BufNewFile,BufRead *.avsc set syntax=json
